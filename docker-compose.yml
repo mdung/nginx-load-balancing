@@ -1,0 +1,21 @@
+version: '3'
+services:
+  server1:
+    build: ./app/server1
+    ports:
+      - "3001:3001"
+
+  server2:
+    build: ./app/server2
+    ports:
+      - "3002:3002"
+
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "80:80"
+    depends_on:
+      - server1
+      - server2

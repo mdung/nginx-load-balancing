@@ -1,0 +1,12 @@
+{
+  "name": "server1",
+  "version": "1.0.0",
+  "description": "Server 1 for load balancing",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
